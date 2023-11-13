@@ -32,6 +32,7 @@ module.exports = {
     'no-var': ['error'],
     'no-unused-vars': 'warn',
     'no-useless-catch': 'off',
+    'vue/no-mutating-props': 'off'
   },
   settings: {
     'import/resolver': {

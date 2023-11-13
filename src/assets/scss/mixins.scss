@@ -19,18 +19,6 @@
   }
 }
 
-@mixin border($color: $gray, $lc: false, $outlined: false) {
-  border-bottom: 1px solid $color;
-  @if $lc == true {
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-  @if $outlined == true {
-    border: 1px solid $color;
-  }
-}
-
 @mixin scrollbar() {
   &::-webkit-scrollbar {
     height: 6px;

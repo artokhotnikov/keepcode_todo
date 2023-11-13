@@ -1,0 +1,21 @@
+@import "@/assets/scss/variables";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+
+  &:not(&:last-child) {
+    border-bottom: 2px solid $gray-100;
+  }
+
+  &-title {
+    max-width: 80%;
+    line-height: 120%;
+  }
+
+  &-actions {
+  }
+}

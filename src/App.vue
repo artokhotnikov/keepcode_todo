@@ -1,14 +1,14 @@
 <script setup>
 import { useRoute } from 'vue-router'
-import VLoader from '@/components/VLoader.vue'
-import { useStateStore } from '@/store/stateStore'
+import VHeader from '@/components/VHeader/VHeader.vue'
+import VFooter from '@/components/VFooter/VFooter.vue'
 
 const route = useRoute()
-const stateStore = useStateStore()
 </script>
 
 <template>
   <main class="main">
+    <VHeader />
     <RouterView v-slot="{ Component }">
       <template v-if="Component">
         <transition name="fade-page" mode="out-in">
@@ -18,7 +18,7 @@ const stateStore = useStateStore()
         </transition>
       </template>
     </RouterView>
-    <VLoader v-if="stateStore.isLoading" />
+    <VFooter />
   </main>
 </template>
 
