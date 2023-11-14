@@ -1,0 +1,38 @@
+@import '@/assets/scss/variables';
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 18px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+
+  &[disabled] {
+    background: $gray-100;
+    cursor: not-allowed;
+  }
+  &.md {
+    height: 44px;
+  }
+}
+
+.primary {
+  background: $primary;
+  color: $white;
+}
+
+.red {
+  background: $warning;
+  color: $white;
+}
+
+.yellow {
+  background: $yellow;
+  color: $white;
+}

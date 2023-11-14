@@ -1,4 +1,4 @@
-@import "@/assets/scss/variables";
+@import '@/assets/scss/variables';
 
 .item {
   display: flex;
@@ -7,7 +7,7 @@
   gap: 12px;
   padding: 12px 0;
 
-  &:not(&:last-child) {
+  &:not(:last-child) {
     border-bottom: 2px solid $gray-100;
   }
 
@@ -17,5 +17,27 @@
   }
 
   &-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media (max-width: $md2 + px) {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+
+    &-title {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $md4 + px) {
+    &-actions {
+      flex-wrap: wrap;
+    }
+    &-checkbox {
+      flex: 0 0 100%;
+    }
   }
 }

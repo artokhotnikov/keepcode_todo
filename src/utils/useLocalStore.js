@@ -7,6 +7,7 @@ export const useLocalStore = () => {
       return null
     }
   }
+
   const setLocalItem = (key, data) => {
     localStorage.setItem(key, JSON.stringify(data))
   }

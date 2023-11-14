@@ -1,12 +1,10 @@
 @import 'variables';
 
 .container {
-  max-width: 1740px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  @media (max-width: $md1 + px) {
-    max-width: 1200px;
-  }
+
   @media (max-width: $md2 + px) {
     max-width: 750px;
   }

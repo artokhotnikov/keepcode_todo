@@ -1,5 +1,9 @@
+@import '@/assets/scss/variables';
+
 .header {
   padding: 40px 0;
   text-align: center;
-  margin: 0 0 54px;
+  @media(max-width: $md2 + px) {
+    padding: 20px 0;
+  }
 }

@@ -6,9 +6,10 @@ import VClickOutside from '@/directives/vClickOutside'
 import vRipple from '@/directives/vRipple'
 import '@/assets/scss/main.scss'
 
+// eslint-disable-next-line no-unused-vars
 const app = createApp(App)
   .directive('ripple', vRipple)
-  .directive('outside', VClickOutside)
+  .directive('click-outside', VClickOutside)
   .use(createPinia())
   .use(router)
   .mount('#app')

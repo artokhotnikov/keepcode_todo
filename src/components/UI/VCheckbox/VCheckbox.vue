@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
   },
@@ -7,7 +7,9 @@ const props = defineProps({
     required: true,
   },
 })
+
 const emits = defineEmits(['change'])
+
 const change = (e) => {
   emits('change', e.target.checked)
 }

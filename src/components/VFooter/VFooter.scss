@@ -1,3 +1,18 @@
+@import '@/assets/scss/variables';
+
 .footer {
   padding: 40px 0;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  @media (max-width: $md2 + px) {
+    padding: 20px 0;
+    &-content {
+      gap: 24px;
+    }
+  }
 }
