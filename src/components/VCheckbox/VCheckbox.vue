@@ -1,22 +1,22 @@
 <script setup>
 const props = defineProps({
-  modelValue: {
-    required: true,
-  },
   title: {
     type: String,
   },
+  value: {
+    required: true,
+  },
 })
-const emits = defineEmits(['update:modelValue'])
+const emits = defineEmits(['change'])
 const change = (e) => {
-  emits('update:modelValue', e.target.checked)
+  emits('change', e.target.checked)
 }
 </script>
 
 <template>
   <div class="checkbox">
     <span v-if="title">{{ title }}</span>
-    <input @change="change" :checked="modelValue" type="checkbox" />
+    <input @change="change" :checked="value" type="checkbox" />
   </div>
 </template>
 

@@ -7,13 +7,21 @@ const props = defineProps({
     required: true,
   },
 })
+const emits = defineEmits(['change'])
+const changeCompleted = (e) => {
+  emits('change', props.item, e)
+}
 </script>
 
 <template>
   <div class="item">
     <div class="item-title">{{ item.title }}</div>
     <div class="item-actions">
-      <VCheckbox v-model="item.completed" title="Статус" />
+      <VCheckbox
+        :value="item.completed"
+        @change="changeCompleted"
+        title="Статус"
+      />
     </div>
   </div>
 </template>
